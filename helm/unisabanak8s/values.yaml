@@ -10,7 +10,7 @@ image:
 
 # Configuración de variables de entorno (Overrides que mostraremos en la UI web)
 env:
-  theme: "purple"       # Puede ser blue, green, red, purple
+  theme: "red"       # Puede ser blue, green, red, purple
   version_name: "v1.0.1 (Actualizado por CI/CD)"
 
 service:
