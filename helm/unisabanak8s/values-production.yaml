@@ -1,0 +1,6 @@
+# Override values para simular un "Entorno de Producción"
+replicaCount: 4
+
+env:
+  theme: "green"
+  version_name: "v1.0.0 (PRODUCCIÓN)"

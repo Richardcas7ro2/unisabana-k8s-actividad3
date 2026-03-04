@@ -1,0 +1,6 @@
+apiVersion: v2
+name: unisabanak8s
+description: Un chart de Helm para desplegar el microservicio de la Actividad 3 K8S
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

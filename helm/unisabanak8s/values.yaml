@@ -1,0 +1,28 @@
+# Configuración por defecto para el microservicio UnisabanaK8s
+
+replicaCount: 2
+
+image:
+  repository: unisabanak8s-app
+  # Overrides de image tag no son recomendables poner en el values principal a veces, pero para desarrollo local KIND usamos latest o una versión fija.
+  tag: "v1.0.0"
+  pullPolicy: IfNotPresent
+
+# Configuración de variables de entorno (Overrides que mostraremos en la UI web)
+env:
+  theme: "blue"       # Puede ser blue, green, red, purple
+  version_name: "v1.0.0 (Entorno Base)"
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: "nginx"
+  # Para pruebas locales, escucharemos en localhost
+  hosts:
+    - host: localhost
+      paths:
+        - path: /
+          pathType: Prefix
