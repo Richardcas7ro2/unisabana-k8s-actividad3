@@ -10,8 +10,8 @@ image:
 
 # Configuración de variables de entorno (Overrides que mostraremos en la UI web)
 env:
-  theme: "blue"       # Puede ser blue, green, red, purple
-  version_name: "v1.0.0 (Entorno Base)"
+  theme: "purple"       # Puede ser blue, green, red, purple
+  version_name: "v1.0.1 (Actualizado por CI/CD)"
 
 service:
   type: ClusterIP
