@@ -1,0 +1,53 @@
+name: Build and Push Docker Image CI/CD
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'app/**'
+      - 'Dockerfile'
+      - 'requirements.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        # Asegúrate de configurar DOCKER_USERNAME y DOCKER_PASSWORD en los Secrets de Github
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          # Etiquetamos con el commit SHA para que Helm y ArgoCD detecten un cambio exacto
+          tags: ${{ secrets.DOCKER_USERNAME }}/unisabanak8s-app:${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}/unisabanak8s-app:latest
+
+  update-helm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          # TOKEN especial en Github para que este bot pueda hacer push
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Update Helm values.yaml
+        # Reemplazamos la versión 'tag: ...' del Helm Chart con el nuevo SHA generado.
+        run: |
+          sed -i 's/tag: .*/tag: "${{ github.sha }}"/' helm/unisabanak8s/values.yaml
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add helm/unisabanak8s/values.yaml
+          git commit -m "chore: Update image tag to ${{ github.sha }}"
+          git push origin main
