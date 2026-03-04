@@ -33,8 +33,8 @@ async def read_root(request: Request):
     hostname = os.getenv("HOSTNAME", socket.gethostname())
     k8s_node = os.getenv("NODE_NAME", "Local / Unknown Node")
     k8s_pod_ip = os.getenv("MY_POD_IP", get_ip_address())
-    app_version = os.getenv("APP_VERSION", "v1.0.0 (Default)")
-    color_theme = os.getenv("COLOR_THEME", "blue") # Para demostrar overrides de Helm!
+    app_version = os.getenv("APP_VERSION", "v1.0.1 (Actualizado por CI/CD)")
+    color_theme = os.getenv("COLOR_THEME", "purple") # Cambiado para demostrar CI/CD y ArgoCD!
 
     # Información adicional
     system_info = f"{platform.system()} {platform.release()}"
