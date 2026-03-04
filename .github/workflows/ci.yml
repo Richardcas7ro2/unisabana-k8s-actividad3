@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'app/**'
-      - 'helm/**'
       - 'Dockerfile'
       - 'requirements.txt'
 
