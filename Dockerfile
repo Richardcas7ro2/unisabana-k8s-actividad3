@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Metadatos del mantenedor
-LABEL maintainer="Ricardo Castro <ricardo@example.com>"
+LABEL maintainer="Ricardo Castro"
 LABEL description="Microservicio base para práctica K8S con FastAPI"
 
 # Establecer directorio de trabajo dentro del contenedor
