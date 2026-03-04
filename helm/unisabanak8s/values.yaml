@@ -3,7 +3,7 @@
 replicaCount: 2
 
 image:
-  repository: unisabanak8s-app
+  repository: richardcas7ro/unisabanak8s-app
   # Overrides de image tag no son recomendables poner en el values principal a veces, pero para desarrollo local KIND usamos latest o una versión fija.
   tag: "bc1b5d228787c76210864ffeb3a41cbb20fb69bf"
   pullPolicy: IfNotPresent
