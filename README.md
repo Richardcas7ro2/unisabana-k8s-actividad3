@@ -38,5 +38,8 @@ Para reproducir este entorno de principio a fin, se requiere:
 - NGINX Ingress Controller (versión para KIND).
 - ArgoCD instalado en el clúster.
 
-## 👨‍💻 Autor
-Ricardo Castro - Estudiante de Maestría
+## 👨‍💻 Autores Grupo 11
+Abdul Mauricio Reyes Parra
+Wilmer Ricardo Castro Delgadillo
+Daniel Alexander Rodriguez
+Manuel Ovalle Diaz
