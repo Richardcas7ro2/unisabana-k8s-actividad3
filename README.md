@@ -39,7 +39,7 @@ Para reproducir este entorno de principio a fin, se requiere:
 - ArgoCD instalado en el clúster.
 
 ## 👨‍💻 Autores Grupo 11
-Abdul Mauricio Reyes Parra.
-Wilmer Ricardo Castro Delgadillo.
-Daniel Alexander Rodriguez.
-Manuel Ovalle Diaz.
+- Abdul Mauricio Reyes Parra.
+- Wilmer Ricardo Castro Delgadillo.
+- Daniel Alexander Rodriguez.
+- Manuel Ovalle Diaz.
