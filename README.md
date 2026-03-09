@@ -27,7 +27,7 @@ El proyecto está compuesto por las siguientes piezas tecnológicas trabajando e
 
 En el siguiente enlace se encuentra el video detallando paso a paso el funcionamiento integral del sistema, demostrando cómo un simple cambio de código (Git Push) desencadena la construcción en la nube y la auto-actualización del clúster en tiempo real gracias a ArgoCD:
 
-> **[📝 INSERTAR AQUÍ EL ENLACE AL VIDEO DE YOUTUBE / DRIVE]**
+> https://unisabanaedu-my.sharepoint.com/:v:/r/personal/danielrodcar_unisabana_edu_co/Documents/videoKubernetes/Arquitectura-Software.mp4?csf=1&web=1&e=BE6Scu&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbE1vZGUiOiJtaXMiLCJyZWZlcnJhbFZpZXciOiJwb3N0cm9sbC1jb3B5bGluayIsInJlZmVycmFsUGxheWJhY2tTZXNzaW9uSWQiOiIxZWM2Yjg5OS1kYzdlLTQ5YjQtOTBkYS05ZDVjNjZlOGE0YjgifX0%3D
 
 ## ⚙️ Requisitos para Ejecución Local
 
